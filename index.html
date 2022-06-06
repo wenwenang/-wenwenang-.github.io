@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Enhance Your Playlist!</title>
+
+<meta charset = "UTF-8">
+<meta name = "author" content = "My Name">
+<meta name = "keywords" content = "HTML, CSS, JavaScript">
+<meta name = "revised" content = "06-02-2022">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #c9daf8ff;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  text-align: center;
+  background-color: white;
+  padding: 100px;
+  color: #434343;
+}
+
+/*Button*/
+.button {
+  background-color: #c9daf8ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+	<form id = "log">
+	
+	<fieldset form = "name">
+	
+		<div class="header">
+            <h1>Enhance Your Playlist Quiz!</h1>
+            <p>Enhance your music taste with the click of a button!</p>
+        </div>
+
+            <div class="main">
+                <h2>Welcome to the Enhance Your Playlist Quiz!</h2>
+                <p>Find your new favorite genre of music to best suit and enhance your tastes in music in just 10 short questions!</p>
+                
+				<br>
+                
+				<h2>More about this quiz...</h2>
+                <p>This test aims to help people try and discover new genres of music. One of four specially curated sub-genres of music will be matched and suggested to you based on a series of questions analyzing your current music taste and the music you would be interested in trying but haven’t had the chance to!</p>
+               
+			   <br>
+                
+				<h2>Before we start...</h2>
+                <p>Ready to take the quiz? Great! Before we start… What should we call you?</p>
+				
+				<br>
+				
+				<label for = "user"> <h2> Hi! You can call me 
+				<input type = "text" id = "user" name = "user"> 
+				Nice to meet you! </h2> </label> <br/> <br/>
+            </div>
+
+	</form>
+	
+
+	
+	<script>
+			
+		function nextPageA(){
+			var inputName = document.getElementById("user")
+			localStorage.setItem("user", inputName.value);
+			window.open("quiz.html");
+				}
+		
+	</script>
+	
+	
+</body>
+</html> 

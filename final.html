@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Enhance Your Playlist!</title>
+
+<meta charset = "UTF-8">
+<meta name = "author" content = "My Name">
+<meta name = "keywords" content = "HTML, CSS, JavaScript">
+<meta name = "revised" content = "06-02-2022">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #c9daf8ff;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  text-align: center;
+  background-color: white;
+  padding: 100px;
+  color: #434343;
+}
+
+/*Button*/
+.button {
+  background-color: #c9daf8ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body onload = "getAnswer()" >
+
+	<form id = "log">
+	
+	<fieldset form = "name">
+	
+		<div class="header">
+            <h1>Enhance Your Playlist Quiz!</h1>
+            <p>Enhance your music taste with the click of a button!</p>
+        </div>
+
+            <div class="main">
+                <h2>Your reccomended genre is...</h2>
+				<img id = "image" src = "images/default.jpg" width = "250" height = "250">
+		    </div>
+				
+	</form>
+		
+	<div class="main">	
+        <button class="button" id = "b1" onclick = "backPageA()" >Try Again!</button>
+    </div>
+	
+	<script>
+		
+		function getAnswer(){
+				var count = 1
+				var itemtotal = 0
+								
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item1"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item2"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item3"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item4"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item5"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item6"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item7"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item8"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item9"));
+				
+				itemtotal = itemtotal + parseInt(localStorage.getItem("item10"));
+				
+				
+				
+					var imageElement = document.getElementById("image");
+					if (itemtotal < 10)
+						imageElement.src = "images/bedroompop.jpg"
+						else if (itemtotal >= 10 && itemtotal < 20){ 
+						imageElement.src = "images/citypop.jpg"
+							}
+						else if (itemtotal >= 20 && itemtotal < 30){ 
+						imageElement.src = "images/kpop.jpg"
+							}
+						else { 
+						imageElement.src = "images/folk.jpg"
+							}
+		}
+	
+	
+		function backPageA(){
+				 window.open("start.html");
+				 
+				}		
+	</script>
+	
+	
+</body>
+</html>

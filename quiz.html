@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Enhance Your Playlist!</title>
+
+<meta charset = "UTF-8">
+<meta name = "author" content = "My Name">
+<meta name = "keywords" content = "HTML, CSS, JavaScript">
+<meta name = "revised" content = "06-02-2022">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #c9daf8ff;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  text-align: center;
+  background-color: white;
+  padding: 100px;
+  color: #434343;
+}
+
+/*Button*/
+.button {
+  background-color: #c9daf8ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body onload = "getName()">
+	
+	<form id = "log" onSubmit = "formDone()">
+	
+	<fieldset form = "log">
+	
+	    <div class="header">
+            <h1>Enhance Your Playlist Quiz!</h1>
+            <p>Enhance your music taste with the click of a button!</p>
+        </div>
+
+            <div class="main">
+                <h2>Welcome!</h2> <h2 id = "user"> </h2> <h2>Ready to begin? Let's go!</h2>
+                <p>First up...</p>
+						
+<! -- itemtions -->
+                <br>
+           
+		        <h2>1. Among these, which is your current favorite pop artist?</h2>
+		   
+		      	    <input type = "radio" id = "1opt1" name = "item1" value = "1">
+			            <label for = "1opt1"> Clairo </label> </br>
+			        <input type = "radio" id = "1opt2" name = "item1" value = "2">
+				        <label for = "1opt2"> Harry Styles </label> <br>
+			        <input type = "radio" id = "1opt3" name = "item1" value = "3">
+				        <label for = "1opt3"> Billie Eilish </label> <br>
+			        <input type = "radio" id = "1opt4" name = "item1" value = "4">
+				        <label for = "1opt4"> Hozier </label> </br> </br>
+				
+			        <br>
+			
+		        <h2>2. What type of sound do you normally enjoy?</h2>
+		   
+		        	<input type = "radio" id = "2opt1" name = "item2" value = "1">
+		        	    <label for = "2opt1"> Light and Fun </label> </br>
+	        		<input type = "radio" id = "2opt2" name = "item2" value = "2">
+	         			<label for = "2opt2"> Fun and Funky </label> <br>
+	        	 	<input type = "radio" id = "2opt3" name = "item2" value = "3">
+		        		<label for = "2opt3"> Heavy and Intense </label> <br>
+	     	    	<input type = "radio" id = "2opt4" name = "item2" value = "4">
+	         			<label for = "2opt4"> Ethereal and Meaningful </label> </br> </br>
+				
+      			<br>
+			
+     		    <h2>3. What type of sound do you enjoy/would be interested in trying but haven’t had a chance to?</h2>
+		  
+          		   	<input type = "radio" id = "3opt1" name = "item3" value = "1">
+	         		    <label for = "3opt1"> Light and Fun </label> </br>
+        			<input type = "radio" id = "3opt2" name = "item3" value = "2">
+	        			<label for = "3opt2"> Fun and Funky </label> <br>
+	        		<input type = "radio" id = "3opt3" name = "item3" value = "3">
+	         			<label for = "3opt3"> Heavy and Intense </label> <br>
+          			<input type = "radio" id = "3opt4" name = "item3" value = "4">
+		        		<label for = "3opt4"> Ethereal and Meaningful </label> </br> </br>
+				
+		    	<br>
+			      
+		        <h2>4. What is your current favorite music genre?</h2>
+		 
+	        	   	<input type = "radio" id = "4opt1" name = "item4" value = "1">
+			            <label for = "4opt1"> Indie Pop/ Alternative Rock </label> </br>
+        			<input type = "radio" id = "4opt2" name = "item4" value = "2">
+         				<label for = "4opt2"> Jazz </label> <br>
+         			<input type = "radio" id = "4opt3" name = "item4" value = "3">
+        				<label for = "4opt3"> HipHop/Dance </label> <br>
+		        	<input type = "radio" id = "4opt4" name = "item4" value = "4">
+		        		<label for = "4opt4"> Ballads </label> </br> </br>
+				
+		     	<br>
+	  		     
+		        <h2>5. What music genre do you like/ would be interested in trying more of but haven’t had a chance to?</h2>
+		   
+		          	<input type = "radio" id = "5opt1" name = "item5" value = "1">
+	           		    <label for = "5opt1"> Indie Pop/ Alternative Rock </label> </br>
+        			<input type = "radio" id = "5opt2" name = "item5" value = "2">
+	        			<label for = "5opt2"> Jazz </label> <br>
+	        		<input type = "radio" id = "5opt3" name = "item5" value = "3">
+	        			<label for = "5opt3"> HipHop/Dance </label> <br>
+	         		<input type = "radio" id = "5opt4" name = "item5" value = "4">
+	        			<label for = "5opt4"> Ballads </label> </br> </br>
+				
+	     		<br>
+			
+		        <h2>6. What type of instrumentals do you prefer in the music you listen to?</h2>
+		   
+		           	<input type = "radio" id = "6opt1" name = "item6" value = "1">
+	        		    <label for = "6opt1"> Rock </label> </br>
+	        		<input type = "radio" id = "6opt2" name = "item6" value = "2">
+	        			<label for = "6opt2"> Electronic/Funky </label> <br>
+	         		<input type = "radio" id = "6opt3" name = "item6" value = "3">
+	       		    	<label for = "6opt3"> I would like to try all of them more! </label> <br>
+        			<input type = "radio" id = "6opt4" name = "item6" value = "4">
+	      	    		<label for = "6opt4"> Acoustic </label> </br> </br>
+				
+		     	<br>
+			
+		        <h2>7. What type of instrumentals would you like to try more of?</h2>
+		   
+	        	   	<input type = "radio" id = "7opt1" name = "item7" value = "1">
+        			    <label for = "7opt1"> Rock </label> </br>
+        			<input type = "radio" id = "7opt2" name = "item7" value = "2">
+        				<label for = "7opt2"> Electronic/Funky </label> <br>
+        			<input type = "radio" id = "7opt3" name = "item7" value = "3">
+        				<label for = "7opt3"> I would like to try all of them more! </label> <br>
+        			<input type = "radio" id = "7opt4" name = "item7" value = "4">
+        				<label for = "7opt4"> Acoustic </label> </br> </br>
+				
+      			<br>
+			     
+	       	    <h2>8. Do you prefer elaborate sounds (many parts and layers of instruments to your music) or more simple arrangements?</h2>
+		   
+        		   	<input type = "radio" id = "8opt1" name = "item8" value = "1">
+        			    <label for = "8opt1"> Very simple (normal bands) </label> </br>
+        			<input type = "radio" id = "8opt2" name = "item8" value = "2">
+        				<label for = "8opt2"> Simple (instruments are generally still distinguishable) </label> <br>
+        			<input type = "radio" id = "8opt3" name = "item8" value = "3">
+	        			<label for = "8opt3"> Elaborate (more layers and parts of instruments over eachother) </label> <br>
+	        		<input type = "radio" id = "8opt4" name = "item8" value = "4">
+        				<label for = "8opt4"> Very elaborate (multiple layers of sounds and many different isntruments) </label> </br> </br>
+				
+       			<br>
+			
+       		    <h2>9. What do you prefer to stand out in the music you listen to?</h2>
+		   
+	        	   	<input type = "radio" id = "9opt1" name = "item9" value = "1">
+	        		    <label for = "9opt1"> I prefer when all are equally balanced! </label> </br>
+	        		<input type = "radio" id = "9opt2" name = "item9" value = "2">
+        				<label for = "9opt2"> Mid-tones (guitar, keyboard, etc) </label> <br>
+	        		<input type = "radio" id = "9opt3" name = "item9" value = "3">
+        				<label for = "9opt3"> Low-tones (bass, drums, etc)  </label> <br>
+        			<input type = "radio" id = "9opt4" name = "item9" value = "4">
+	        			<label for = "9opt4"> Vocals </label> </br> </br>
+				
+		    	<br>
+		   
+	      	    <h2>10. Which is more important to you in music?</h2>
+           
+		         	<input type = "radio" id = "10opt1" name = "item10" value = "1">
+	        		    <label for = "10opt1"> Lyrics and Vocals </label> </br>
+	        		<input type = "radio" id = "10opt2" name = "item10" value = "2">
+	        			<label for = "10opt2"> Overall mood </label> <br>
+	        		<input type = "radio" id = "10opt3" name = "item10" value = "3">
+	        			<label for = "10opt3"> All are equally important! </label> <br>
+	        		<input type = "radio" id = "10opt4" name = "item10" value = "4">
+	        			<label for = "10opt4"> Specific melody and instrumentals </label> </br> </br>
+						
+				<br>
+			
+		       	<input type = "submit" class = "button" value = "submit quiz!">
+	</form>
+	
+    <div class="main">	
+        <button class="button" id = "b1" onclick = "backPageA()" >Go back!</button>
+	</div>
+	
+    <script>
+		
+		
+		function formDone(){
+			var item1Radios = document.getElementsByName("item1");
+    		var item1Selected = Array.from(item1Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item1", item1Selected.value);
+			
+			var item2Radios = document.getElementsByName("item2");
+    		var item2Selected = Array.from(item2Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item2", item2Selected.value);
+			
+			var item3Radios = document.getElementsByName("item3");
+    		var item3Selected = Array.from(item3Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item3", item3Selected.value);
+			
+			var item4Radios = document.getElementsByName("item4");
+    		var item4Selected = Array.from(item4Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item4", item4Selected.value);
+			
+			var item5Radios = document.getElementsByName("item5");
+    		var item5Selected = Array.from(item5Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item5", item5Selected.value);
+			
+			var item6Radios = document.getElementsByName("item6");
+    		var item6Selected = Array.from(item6Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item6", item6Selected.value);
+			
+			var item7Radios = document.getElementsByName("item7");
+    		var item7Selected = Array.from(item7Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item7", item7Selected.value);
+			
+			var item8Radios = document.getElementsByName("item8");
+    		var item8Selected = Array.from(item8Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item8", item8Selected.value);
+				
+			var item9Radios = document.getElementsByName("item9");
+    		var item9Selected = Array.from(item9Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item9", item9Selected.value);
+				
+			var item10Radios = document.getElementsByName("item10");
+    		var item10Selected = Array.from(item10Radios).find(radio => radio.checked);
+			
+				localStorage.setItem("item10", item10Selected.value);
+					
+			window.open("final.html");
+		}
+		
+		function getName(){
+			document.getElementById("user").innerHTML = localStorage.getItem("user");
+		}
+		
+		function backPageA(){
+				 window.open("start.html");
+				}		
+				
+	</script>
+	
+</body>
+</html>
